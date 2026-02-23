@@ -1,0 +1,84 @@
+{
+  "image": "docker.io/texlive/texlive:latest",
+  "name": "LaTeX",
+  "runArgs": [
+    "--name",
+    "resume-dev"
+  ],
+  // "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // LaTeX Workshop, goes without saying.
+        "james-yu.latex-workshop",
+        "ltex-plus.vscode-ltex-plus"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.outDir": "%DIR%/out_dir",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk (xelatex)",
+            "tools": [
+              "latexmk-xe"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk-xe",
+            "command": "latexmk",
+            "args": [
+              "-pdfxe",
+              "--shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.formatting.latex": "latexindent",
+        // region chktex
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
+        // endregion
+        // region latexindent
+        "latex-workshop.latexindent.enabled": true,
+        //* This needs to be left as the command because the installation
+        //*   location varies across architecture builds
+        "latex-workshop.latexindent.exec.path": "latexindent",
+        "latex-workshop.formatting.latexindent.args": [
+          "-c",
+          "%DIR%/",
+          "%TMPFILE%",
+          "-y=defaultIndent: '%INDENT%'"
+        ],
+        // endregion
+        // region syntex
+        "latex-workshop.synctex.afterBuild.enabled": true,
+        // endregion
+        "latex-workshop.view.pdf.viewer": "tab",
+        "ltex.additionalRules.enablePickyRules": true,
+        "ltex.enabled": [
+          "latex"
+        ],
+        "ltex.diagnosticSeverity": {
+          "default": "information",
+          "MORFOLOGIK_RULE_EN_US": "warning", // Spelling errors.
+          "PASSIVE_VOICE": "hint",
+          "ENGLISH_WORD_REPEAT_BEGINNING_RULE": "hint",
+          "TOO_LONG_SENTENCE": "hint"
+        }
+      }
+    }
+  }
+}

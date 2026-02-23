@@ -1,0 +1,16 @@
+Taska
+floorball
+Podman
+Gödöllői
+Török
+Ignác
+Gimnázium
+Kft
+Saman
+FenReal
+MinIO
+OpenSearch
+jBPM
+Keycloak
+Redis
+Authentik

@@ -1,0 +1,140 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{profile.jpg} % Profile picture
+
+\cvname{Tamás Taska} % Your name
+
+\cvjobtitle{Software engineer} % Job title/career
+
+\cvdate{22 July 1999} % Date of birth
+\cvaddress{Budapest, Hungary} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+36 20 539 7116} % Phone number
+\cvmail{tamas.taska@gmx.com} % Email address
+\cvsite{}
+\github{github.com/taskat}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{I am a software engineer from Budapest, Hungary. In my free time I like to play all kinds of board games, my favorites are cooperative games. I also play video games, mostly puzzle games. When it comes to sport, I am into everything. I do bouldering, play floorball, go on hikes, and bike tours, these are the most common sport activities that I participate in. I also like to build Lego sets and work on hobby projects. And sometimes I try to grow chili peppers in my living room.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{Git/5},{{Docker/Podman containers}/5.2},{Kubernetes/3.3},{C++/3},{Python/4},{Golang/5.5}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+\skillstext{}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+I really like challenging puzzles of any kind, some new kind of food or a good sporting opportunity.
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2010-2018}{Gödöllői Török Ignác Gimnázium}{}{Specializing in mathematics and physics.}
+	\twentyitem{2018-2022}{B.Sc. Budapest University of Technology and Economics}{}{Majoring in Computer Science, specification: Software Development \newline Thesis: Automatic Generation of DDS Descriptors from Data Flow Network Models}
+	\twentyitem{2022-2024}{M.Sc. Budapest University of Technology and Economics}{}{Majoring in Computer Science, specification: Software Engineering \newline Thesis: Simulation of a Rubik's cube puzzle with domain-specific languages}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work experience}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2020-2021}{Nokia Solutions and Networks}{Intern}{Work on a Chaos Monkey like tool for testing the robustness of distributed systems. I was writing part of the tool in Go, and was responsible for the executor part of the system. My components were responsible for executing the actual chaos tests (e.g., killing a random process, or blocking network traffic). I was also responsible for writing Helm charts for the deployment of the system on Kubernetes.}
+	\twentyitem{2022-}{Kiss Consult Kft}{Software Engineer}{I am working multiple different projects, mostly backend services in Go. I am responsible for the design and implementation of the services, as well as their deployment and maintenance. I am also involved in the development of a custom CI/CD system, which is used for the deployment of our services. A couple of the projects I am/was working on are:
+		\begin{itemize}
+			\item Saman
+			      \begin{itemize}
+				      \item A SaaS designed specifically for the needs of an oil analysis company. It is custom-built to handle the specific needs of the company, and to integrate with their existing systems.
+				      \item Used software programs and technologies: Go, Python, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, Docker/Podman, Kubernetes
+				      \item I am working on the main backend service, which is responsible for the business logic of the system. I've also written most of the CI/CD pipelines, and handling the deployment and maintenance of the system as well as the necessary migrations.
+				      \item This project runs in production since the first half of 2023
+			      \end{itemize}
+			\item Obelix
+			      \begin{itemize}
+				      \item A SaaS managing and handling automated calls and responses for a telephony survey system.
+				      \item Used software programs and technologies: Go, Angular, RabbitMQ, Asterix, PostgreSQL, OpenSearch, Docker/Podman, Kubernetes
+				      \item I was responsible for the integration of Asterix and RabbitMQ, as well as the design and implementation of the main backend service. I also wrote the Helm charts for the system.
+				      \item Even though the system was ready, it was never ran in production, as the client decided to go with a different solution.
+			      \end{itemize}
+			\item FenReal
+			      \begin{itemize}
+				      \item A SaaS designed to implement an extra layer of security over video calls. It uses face recognition to identify and cross-check the participants of the meeting to prevent real time deep fakes and other types of identity fraud.
+				      \item Used software programs and technologies: Python, Go, Electron, Docker/Podman, Authentik, Redis
+				      \item It is a microservice based system, with multiple services, and a Redis for caching and session management.
+				      \item This is still an ongoing project.
+			      \end{itemize}
+		\end{itemize}}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+% \section{Other information}
+
+% \subsection{Review}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
