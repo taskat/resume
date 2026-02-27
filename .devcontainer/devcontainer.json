@@ -5,13 +5,15 @@
     "--name",
     "resume-dev"
   ],
+  "postCreateCommand": "apt-get update && apt-get install -y openssh-client",
   // "workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {
       "extensions": [
         // LaTeX Workshop, goes without saying.
         "james-yu.latex-workshop",
-        "ltex-plus.vscode-ltex-plus"
+        "ltex-plus.vscode-ltex-plus",
+        "eamodio.gitlens"
       ],
       "settings": {
         "files.eol": "\n",
