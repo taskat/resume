@@ -75,6 +75,7 @@
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\github}[1]{\renewcommand{\github}{#1}}
+\newcommand{\linkedin}[1]{\renewcommand{\linkedin}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
@@ -148,6 +149,7 @@
 			\ifthenelse{\equal{\cvaddress}{}}{}{{\Large\icon{\Letter}}      & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{{\Large\icon{\Telefon}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\github}{}}{}{{\large\icon{\faGithub}}       & \href{https://\github}{\nolinkurl{\github}}\\}
+			\ifthenelse{\equal{\linkedin}{}}{}{{\large\icon{\faLinkedin}}   & \href{https://\linkedin}{\nolinkurl{\linkedin}}\\}
 			\ifthenelse{\equal{\cvmail}{}}{}{{\large\icon{@}}               & \href{mailto:\cvmail}{\nolinkurl{\cvmail}}}
 		\end{tabular}
 
