@@ -151,9 +151,9 @@
 			\ifthenelse{\equal{\cvdate}{}}{}{{\Large\icon{\Info}}           & \cvdate\\}
 			\ifthenelse{\equal{\cvaddress}{}}{}{{\Large\icon{\Letter}}      & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{{\Large\icon{\Telefon}} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{{\large\icon{@}}               & \href{mailto:\cvmail}{\nolinkurl{\cvmail}}\\}
 			\ifthenelse{\equal{\github}{}}{}{{\large\icon{\faGithub}}       & \href{https://\github}{\nolinkurl{\github}}\\}
 			\ifthenelse{\equal{\linkedin}{}}{}{{\large\icon{\faLinkedin}}   & \href{https://\linkedin}{\nolinkurl{\linkedin}}\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{{\large\icon{@}}               & \href{mailto:\cvmail}{\nolinkurl{\cvmail}}}
 		\end{tabular}
 
 		%------------------------------------------------
@@ -267,7 +267,7 @@
 	\nopagebreak \vspace{0.2em}
 
 	% Use a simple quote-like indentation that is breakable
-	\begin{itemize}[label={}, leftmargin=2cm, rightmargin=0pt, nosep, after=\vspace{0.8em}]
+	\begin{itemize}[label={}, leftmargin=2cm, rightmargin=0.5cm, nosep, after=\vspace{0.4em}]
 		\item \sloppy #4
 	\end{itemize}
 	\par

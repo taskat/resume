@@ -16,7 +16,7 @@
 
 \cvjobtitle{Software engineer} % Job title/career
 
-\cvdate{22 July 1999} % Date of birth
+\cvdate{July 1999} % Date of birth
 \cvaddress{Budapest, Hungary} % Short address/location, use \newline if more than 1 line is required
 \cvnumberphone{+36 20 539 7116} % Phone number
 \cvmail{tamas.taska@gmx.com} % Email address
@@ -32,14 +32,14 @@
 %	 ABOUT ME
 %----------------------------------------------------------------------------------------
 
-\aboutme{I am a software engineer from Budapest, Hungary. In my free time I like to play all kinds of board games, my favorites are cooperative games. I also play video games, mostly puzzle games. When it comes to sport, I am into everything. I do bouldering, play floorball, go on hikes, and bike tours, these are the most common sport activities that I participate in. I also like to build Lego sets and work on hobby projects. And sometimes I try to grow chili peppers in my living room.} % To have no About Me section, just remove all the text and leave \aboutme{}
+\aboutme{}
 
 %----------------------------------------------------------------------------------------
 %	 SKILLS
 %----------------------------------------------------------------------------------------
 
 % Skill bar section, each skill must have a value between 0 an 6 (float)
-\skills{{{GitLab-GitLab CI}/4},{Git/5},{{Docker/Podman containers}/5.2},{Kubernetes/3.3},{C++/3},{Python/4},{Golang/5.5}}
+\skills{{{GitLab-GitLab CI}/4},{Git/5},{{Docker/Podman containers}/5.2},{Kubernetes/3.3},{C++/3},{Python/4},{Go/5.5}}
 
 %------------------------------------------------
 
@@ -54,9 +54,42 @@
 %	 INTERESTS
 %----------------------------------------------------------------------------------------
 
-% \section{Interests}
+\section{About me}
 
-% I am interested in backend/business logic development
+\begin{minipage}{0.95\textwidth}I am a software engineer from Budapest, Hungary. I am interested in mainly backend/business logic development, and partly in DevOps related tasks. In my free time I like to play all kinds of board games, my favorites are cooperative games. I also play video games, mostly puzzle games. When it comes to sport, I am into everything. I do bouldering, play floorball, go on hikes and bike tours, skiing or snowboarding, but I mostly open to try anything new. I also like to build Lego sets and work on hobby projects like Advent of Code. And sometimes I try to grow chili peppers in my living room.
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{2em}
+\section{Work experience}
+
+\twentyentry{2020-2021}{Nokia Solutions and Networks}{Intern}{Work on a Chaos Monkey like tool for testing the robustness of distributed systems. I was writing part of the tool in Go, and was responsible for the executor part of the system. My components were responsible for executing the actual chaos tests (e.g., killing a random process, or blocking network traffic). I was also responsible for writing Helm charts for the deployment of the system on Kubernetes.}
+\twentyentry{2022-}{Kiss Consult Kft}{Software Engineer}{I am working multiple different projects, mostly backend services in Go. I am responsible for the design and implementation of the services, as well as their deployment and maintenance. I am also involved in the development of a custom CI/CD system, which is used for the deployment of our services. A couple of the projects I am/was working on:
+	\begin{itemize}[leftmargin=0.5cm, rightmargin=0.5cm]
+		\item \vspace{1em} \textbf{Saman} \vspace{0.5em}
+		      \begin{itemize}
+			      \item A SaaS designed specifically for the needs of an oil analysis company, like simplifying analysis workflow and integrating with their existing systems.
+			      \item Used software programs and technologies: Go, Python, Typescript, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, Docker\slash Podman, Kubernetes.
+			      \item I am working on the main backend service, which is responsible for the business logic of the system. I've also written the CI/CD pipelines, and handling the deployment and maintenance of the system as well as the necessary migrations.
+			      \item This project runs in production since the first half of 2023, and is still actively developed and maintained due to the evolving needs of the client.
+		      \end{itemize}
+		\item \vspace{1em} \textbf{Obelix} \vspace{0.5em}
+		      \begin{itemize}
+			      \item A SaaS managing and handling automated calls and responses for a telephony survey system. It was originally designed to be part of another project, but it was later requested to be a standalone system.
+			      \item Used software programs and technologies: Go, Angular, RabbitMQ, Asterix, PostgreSQL, OpenSearch, Docker\slash Podman, Kubernetes, Helm.
+			      \item As it was a solo project from the beginning, I was responsible for the design and implementation of the system, as well as writing and testing the Helm charts for the deployment of the system on Kubernetes.
+			      \item It is a finished project, but the client did not want to put it into production, so it is currently not in use.
+		      \end{itemize}
+		\item \vspace{1em} \textbf{kAIa} \vspace{0.5em}
+		      \begin{itemize}
+			      \item A SaaS designed to implement an extra layer of security over video calls. It uses face recognition to identify and cross-check the participants of the meeting to prevent real time deep fakes and other types of identity fraud.
+			      \item Used software programs and technologies: Python, Go, Electron, Docker/Podman, Authentik, Redis, Firebase (for notifications).
+			      \item I am working on the backend part of the system, and I handle the integration of the new components into the system.
+			      \item This is an ongoing internal project of the company, with plans to sell it as a product in the future, but it is currently not in production.
+		      \end{itemize}
+	\end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
@@ -71,36 +104,6 @@
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Work experience}
-
-\twentyentry{2020-2021}{Nokia Solutions and Networks}{Intern}{Work on a Chaos Monkey like tool for testing the robustness of distributed systems. I was writing part of the tool in Go, and was responsible for the executor part of the system. My components were responsible for executing the actual chaos tests (e.g., killing a random process, or blocking network traffic). I was also responsible for writing Helm charts for the deployment of the system on Kubernetes.}
-\twentyentry{2022-}{Kiss Consult Kft}{Software Engineer}{I am working multiple different projects, mostly backend services in Go. I am responsible for the design and implementation of the services, as well as their deployment and maintenance. I am also involved in the development of a custom CI/CD system, which is used for the deployment of our services. A couple of the projects I am/was working on:
-	\begin{itemize}
-		\item \vspace{1em} \textbf{Saman}
-		      \begin{itemize}
-			      \item A SaaS designed specifically for the needs of an oil analysis company. It is custom-built to handle the specific needs of the company, and to integrate with their existing systems.
-			      \item Used software programs and technologies: Go, Python, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, Docker\slash Podman, Kubernetes
-			      \item I am working on the main backend service, which is responsible for the business logic of the system. I've also written most of the CI/CD pipelines, and handling the deployment and maintenance of the system as well as the necessary migrations.
-			      \item This project runs in production since the first half of 2023
-		      \end{itemize}
-		\item \vspace{1em} \textbf{Obelix}
-		      \begin{itemize}
-			      \item A SaaS managing and handling automated calls and responses for a telephony survey system.
-			      \item Used software programs and technologies: Go, Angular, RabbitMQ, Asterix, PostgreSQL, OpenSearch, Docker\slash Podman, Kubernetes
-			      \item It is a finished solo project, but the client did not want to put it into production, so it is currently not in use.
-		      \end{itemize}
-		\item \vspace{1em} \textbf{kAIa}
-		      \begin{itemize}
-			      \item A SaaS designed to implement an extra layer of security over video calls. It uses face recognition to identify and cross-check the participants of the meeting to prevent real time deep fakes and other types of identity fraud.
-			      \item Used software programs and technologies: Python, Go, Electron, Docker/Podman, Authentik, Redis, Firebase (for notifications).
-			      \item I am working on the backend part of the system, and I handle the integration of the new components into the system.
-			      \item This is still an ongoing project.
-		      \end{itemize}
-	\end{itemize}}
 
 %----------------------------------------------------------------------------------------
 %	 OTHER INFORMATION
