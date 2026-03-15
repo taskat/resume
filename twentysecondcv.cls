@@ -7,7 +7,7 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage{fontspec}
-\setsansfont{Libertinus Sans}
+\setsansfont{Latin Modern Sans}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -38,7 +38,6 @@
 %	 MISC CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\renewcommand{\bfseries}{\color{gray}} % Make \textbf produce coloured text instead
 
 \pagestyle{empty} % Disable headers and footers
 
@@ -228,17 +227,18 @@
 
 % New environment for the long list
 \newenvironment{twenty}{%
-	\begin{tabular}{@{}ll@{}}
+	\begin{tabular}{@{} p{1.7cm} @{\hskip 0.2cm} l @{}}
 		}{%
 	\end{tabular}
 }
 
 \newcommand{\twentyitem}[4]{%
-	#1&\parbox[t]{0.83\textwidth}{%
+	#1:&\parbox[t]{\dimexpr\textwidth-2.3cm\relax}{%
 		\RaggedRight
-		\textbf{#2}%
-		\hfill%
-		{\footnotesize#3}\\%
+		\textbf{#2}
+		\ifstrempty{#3}{}{%
+			{\color{black}\footnotesize\itshape\enspace--\enspace#3}%
+		}\\%
 		#4\vspace{\parsep}%
 	}\\
 }
