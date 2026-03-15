@@ -20,6 +20,10 @@
 \RequirePackage{parskip}
 \RequirePackage{fontawesome}
 \RequirePackage{xurl}
+\RequirePackage{longtable}
+\RequirePackage{enumitem}
+\usepackage{etoolbox}
+\AtBeginEnvironment{itemize}{\sloppy}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -227,9 +231,9 @@
 
 % New environment for the long list
 \newenvironment{twenty}{%
-	\begin{tabular}{@{} p{1.7cm} @{\hskip 0.2cm} l @{}}
+	\begin{longtable}{@{} p{1.7cm} @{\hskip 0.2cm} l @{}}
 		}{%
-	\end{tabular}
+	\end{longtable}
 }
 
 \newcommand{\twentyitem}[4]{%
@@ -241,6 +245,32 @@
 		}\\%
 		#4\vspace{\parsep}%
 	}\\
+}
+
+\setlist[itemize]{rightmargin=0.2cm, leftmargin=*}
+
+\newcommand{\twentyentry}[4]{%
+	\noindent
+	\begin{minipage}[t]{1.7cm}
+		\vspace{0pt}
+		\RaggedRight #1:
+	\end{minipage}%
+	\hspace{0.2cm}
+	\begin{minipage}[t]{\dimexpr\textwidth- 2cm\relax}
+		\RaggedRight
+		{\color{black}\bfseries #2}
+		\ifstrempty{#3}{}{%
+			{\color{black!70}\footnotesize\itshape\enspace--\enspace#3}%
+		}
+	\end{minipage}
+
+	\nopagebreak \vspace{0.2em}
+
+	% Use a simple quote-like indentation that is breakable
+	\begin{itemize}[label={}, leftmargin=2cm, rightmargin=0pt, nosep, after=\vspace{0.8em}]
+		\item \sloppy #4
+	\end{itemize}
+	\par
 }
 
 %----------------------------------------------------------------------------------------
