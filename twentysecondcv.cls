@@ -100,14 +100,14 @@
 	}
 }
 
-% Command for printing skills text
-\newcommand\skillstext[1]{
-	\renewcommand{\skillstext}{
-		\begin{flushleft}
+% Command for printing other skills
+\newcommand\otherskills[1]{
+	\renewcommand{\otherskills}{
+		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-					\x$ \star $\y
+					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,\i+0.4) {\normalsize \textbf{\x} - \hfill {\y}};
 				}
-		\end{flushleft}
+		\end{tikzpicture}
 	}
 }
 
@@ -115,9 +115,9 @@
 %	 SIDEBAR LAYOUT
 %----------------------------------------------------------------------------------------
 
-\newcommand{\makeprofile}{
+\newcommand{\makeprofile}[1]{
 	\begin{tikzpicture}[remember picture,overlay]
-		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+		\node [rectangle, fill=sidecolor, anchor=north west, minimum width=7cm, minimum height=\paperheight+1cm] (box) at (current page.north west){};
 	\end{tikzpicture}
 
 	%------------------------------------------------
@@ -167,10 +167,14 @@
 
 		%------------------------------------------------
 
-		\profilesection{Skills}
-
-		\skills
-		\skillstext
+		\ifnum#1=1
+			\profilesection{Skills}
+			\skills
+		\fi
+		\ifnum#1=2
+			\profilesection{Other skills}
+			\otherskills
+		\fi
 		\scriptsize
 		% (*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 
