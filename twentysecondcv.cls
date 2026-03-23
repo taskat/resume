@@ -173,6 +173,7 @@
 		\fi
 		\ifnum#1=2
 			\profilesection{Other skills}
+			\par\vspace*{0.35cm}
 			\otherskills
 		\fi
 		\scriptsize
