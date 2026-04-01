@@ -16,3 +16,5 @@ Redis
 Authentik
 kAIa
 Github-Github
+Covint
+APIaaS

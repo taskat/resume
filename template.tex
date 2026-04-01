@@ -39,12 +39,14 @@
 %----------------------------------------------------------------------------------------
 
 % Skill bar section, each skill must have a value between 0 an 6 (float)
-\skills{{{Github-Github Actions}/4},{{GitLab-GitLab CI}/4},{Git/5},{Helm charts/2.2},{Kubernetes/3.3},{{Docker/Podman containers}/5.2},{Rust/2.5},{C++/3},{Python/4},{Go/5.5}}
+\skills{{Go/5.5},{Python/4},{C++/3},{Rust/2.5},{{Docker/Podman containers}/5.2},{Kubernetes/3.3},{Helm charts/2.2},{Git/5},{{GitLab-GitLab CI}/4},{{Github-Github Actions}/4}}
 
 %------------------------------------------------
 
 % Other skills section, each skill must have a value between 0 and 5 (float)
-\otherskills{{Driving license/B category}, {Hungarian/Native}, {German/No exam, around A1},{English/B2}}
+\otherskills{{English/B2},{German/No exam, around A1},{Hungarian/Native}, {Driving license/B category}}
+
+\softskills{{Attention to detail}, {Critical thinking}, {Teamwork}, {Communication}, {Problem-solving}, {Time management}}
 
 %----------------------------------------------------------------------------------------
 
@@ -56,7 +58,9 @@
 
 \section{About me}
 
-\begin{minipage}{0.95\textwidth}I am a software engineer from Budapest, Hungary. I am interested in mainly backend/business logic development, and partly in DevOps related tasks. In my free time I like to play all kinds of board games, my favorites are cooperative games. I also play video games, mostly puzzle games. When it comes to sport, I am into everything. I do bouldering, play floorball, go on hikes and bike tours, skiing or snowboarding, but I mostly open to try anything new. I also like to build Lego sets and work on hobby projects like Advent of Code. And sometimes I try to grow chili peppers in my living room.
+\begin{minipage}{0.95\textwidth}I am a software engineer from Budapest, Hungary. I am interested in mainly backend/business logic development, and partly in DevOps related tasks. I like working with other people, and I am always open to have a professional discussion about the best solution for a given problem.
+
+	In my free time I like to play all kinds of board games, my favorites are cooperative games. I also play video games, mostly puzzle games. When it comes to sport, I am into everything but mainly floorball and bouldering. I do some hobby projects when I have the time, like Advent of Code.
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
@@ -65,31 +69,78 @@
 \vspace{2em}
 \section{Work experience}
 
-\twentyentry{2020-2021}{Nokia Solutions and Networks}{Intern}{Work on a Chaos Monkey like tool for testing the robustness of distributed systems. I was writing part of the tool in Go, and was responsible for the executor part of the system. My components were responsible for executing the actual chaos tests (e.g., killing a random process, or blocking network traffic). I was also responsible for writing Helm charts for the deployment of the system on Kubernetes.}
-\twentyentry{2022-}{Kiss Consult Kft}{Software Engineer}{I am working multiple different projects, mostly backend services in Go. I am responsible for the design and implementation of the services, as well as their deployment and maintenance. I am also involved in the development of a custom CI/CD system, which is used for the deployment of our services. A couple of the projects I am/was working on:
+\twentyentry{2020-2021}{Nokia Solutions and Networks}{Intern}{
+	\begin{itemize}
+		\item Chaos Monkey like tool for testing the robustness of distributed systems
+		\item Worked in a team of 5+
+		\item Developed a component by myself
+		\item Used Go, Docker and Helm charts for Kubernetes deployment
+	\end{itemize}
+}
+\twentyentry{2022-}{Kiss Consult Kft}{Software Engineer}{
+	\begin{itemize}
+		\item Multiple projects for different clients
+		\item Working in a team of 2-5 people, depending on the project
+		\item Backend development, little frontend, DevOps related tasks
+		\item Designing and implementing company-wide best practices and standards
+		\item Used technologies: Go, Python, Typescript, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, RabbitMQ, Asterix, PostgreSQL, Electron, Authentik, Redis, Firebase (for notifications), Docker, Podman, Kubernetes, Helm
+	\end{itemize}
 	\begin{itemize}[leftmargin=0.5cm, rightmargin=0.5cm]
 		\item \vspace{1em} \textbf{Saman} \vspace{0.5em}
 		      \begin{itemize}
-			      \item A SaaS designed specifically for the needs of an oil analysis company, like simplifying analysis workflow and integrating with their existing systems.
-			      \item Used software programs and technologies: Go, Python, Typescript, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, Docker\slash Podman, Kubernetes.
-			      \item I am working on the main backend service, which is responsible for the business logic of the system. I've also written the CI/CD pipelines, and handling the deployment and maintenance of the system as well as the necessary migrations.
-			      \item This project runs in production since the first half of 2023, and is still actively developed and maintained due to the evolving needs of the client.
+			      \item A SaaS designed specifically for the needs of an oil analysis company
+			      \item Simplifying and automating existing workflow
+			      \item Integrating with existing and new systems to provide a seamless experience for the users
+			      \item Runs in production since the first half of 2023
+			      \item Actively developed and maintained
 		      \end{itemize}
 		\item \vspace{1em} \textbf{Obelix} \vspace{0.5em}
 		      \begin{itemize}
-			      \item A SaaS managing and handling automated calls and responses for a telephony survey system. It was originally designed to be part of another project, but it was later requested to be a standalone system.
-			      \item Used software programs and technologies: Go, Angular, RabbitMQ, Asterix, PostgreSQL, OpenSearch, Docker\slash Podman, Kubernetes, Helm.
-			      \item As it was a solo project from the beginning, I was responsible for the design and implementation of the system, as well as writing and testing the Helm charts for the deployment of the system on Kubernetes.
-			      \item It is a finished project, but the client did not want to put it into production, so it is currently not in use.
+			      \item An APIaaS managing and handling automated calls and responses for a telephony survey system
+			      \item Only developer on the project
+			      \item Finished project, client decided to not use it
+		      \end{itemize}
+		\item \vspace{1em} \textbf{Covint} \vspace{0.5em}
+		      \begin{itemize}
+			      \item A SaaS for showing predictions about the COVID-19 related data
+			      \item The client was a team of doctors and researchers
+			      \item Predictions were statistics based on the client-provided data
+			      \item Finished project, but not maintained
 		      \end{itemize}
 		\item \vspace{1em} \textbf{kAIa} \vspace{0.5em}
 		      \begin{itemize}
-			      \item A SaaS designed to implement an extra layer of security over video calls. It uses face recognition to identify and cross-check the participants of the meeting to prevent real time deep fakes and other types of identity fraud.
-			      \item Used software programs and technologies: Python, Go, Electron, Docker/Podman, Authentik, Redis, Firebase (for notifications).
-			      \item I am working on the backend part of the system, and I handle the integration of the new components into the system.
-			      \item This is an ongoing internal project of the company, with plans to sell it as a product in the future, but it is currently not in production.
+			      \item A SaaS designed to implement an extra layer of security over video calls
+			      \item Using face recognition and AI to validate users and detect potential intruders
+			      \item Currently in development, not yet released
 		      \end{itemize}
 	\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	 HOBBY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Hobby projects}
+
+\begin{itemize}
+	\item \href{https://github.com/taskat/aoc}{Advent of Code}:
+	      \begin{itemize}
+		      \item Problem-solving challenges with daily new problems in December
+		      \item I used mainly Go, but have solutions in Python and Rust as well
+		      \item Prioritizing clean and maintainable code
+		      \item Prioritizing efficient algorithmic solutions and heuristics, not brute force solutions
+		      \item Adding new solution every year, and sometimes going back to previous years to optimize solutions and add new ones
+	      \end{itemize}
+	\item \href{https://github.com/taskat/gopp}{Go compiler}
+	      \begin{itemize}
+		      \item A Go compiler written in Go with Antlr4
+		      \item Implemented syntactical and semantical analysis
+		      \item The goal was to get familiar with compiler design and implementation, not to create a production-ready compiler
+		      \item Also has ideas to extend the language capabilities
+		      \item Plans to continue work on it in the future
+	      \end{itemize}
+\end{itemize}
+
+% \subsection{Review}
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION

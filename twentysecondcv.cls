@@ -25,6 +25,8 @@
 \usepackage{etoolbox}
 \AtBeginEnvironment{itemize}{\sloppy}
 
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -92,9 +94,9 @@
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-					\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-					\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-					\node [above right] at (0,\i+0.4) {\x};
+					\draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
+					\draw[fill=white,mainblue](0,-\i) rectangle (\y,-\i+0.4);
+					\node [above right] at (0,-\i+0.4) {\x};
 				}
 		\end{tikzpicture}
 	}
@@ -105,7 +107,18 @@
 	\renewcommand{\otherskills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,\i+0.4) {\normalsize \textbf{\x} - \hfill {\y}};
+					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,-\i+0.4) {\normalsize \textbf{\x} - \hfill {\y}};
+				}
+		\end{tikzpicture}
+	}
+}
+
+% Command for printing soft skills
+\newcommand\softskills[1]{
+	\renewcommand{\softskills}{
+		\begin{tikzpicture}
+			\foreach [count=\i] \x in {#1}{
+					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,-\i+0.4) {\normalsize \textbf{\x}};
 				}
 		\end{tikzpicture}
 	}
@@ -172,6 +185,10 @@
 			\skills
 		\fi
 		\ifnum#1=2
+			\profilesection{Soft skills}
+			\par\vspace*{0.35cm}
+			\softskills
+			\par\vspace*{0.7cm}
 			\profilesection{Other skills}
 			\par\vspace*{0.35cm}
 			\otherskills
