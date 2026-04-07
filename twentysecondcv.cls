@@ -27,6 +27,8 @@
 
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
 
+\usepackage{enumitem}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -49,6 +51,8 @@
 
 \setlength{\parindent}{0pt} % Disable paragraph indentation
 \hfuzz=0.5pt % Ignore negligible overfull hbox warnings
+\setlist[itemize,2]{label=\textbullet}
+\setlist[itemize,3]{label=\textbullet}
 
 %----------------------------------------------------------------------------------------
 %	 SIDEBAR DEFINITIONS
