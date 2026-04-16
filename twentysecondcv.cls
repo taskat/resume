@@ -134,12 +134,12 @@
 
 \newcommand{\makeprofile}[1]{
 	\begin{tikzpicture}[remember picture,overlay]
-		\node [rectangle, fill=sidecolor, anchor=north west, minimum width=7cm, minimum height=\paperheight+1cm] (box) at (current page.north west){};
+		\node [rectangle, fill=sidecolor, anchor=north west, minimum width=7.4cm, minimum height=\paperheight+1cm] (box) at (current page.north west){};
 	\end{tikzpicture}
 
 	%------------------------------------------------
 
-	\begin{textblock}{6}(0.5, 0.2)
+	\begin{textblock}{6}(1, 0.8)
 
 		%------------------------------------------------
 
@@ -323,6 +323,6 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7.9cm,top=1cm,right=1cm,bottom=1cm,nohead,nofoot]{geometry}
 
 \RequirePackage{hyperref}
