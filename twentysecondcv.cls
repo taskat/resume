@@ -111,8 +111,8 @@
 	\renewcommand{\otherskills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,-\i+0.4) {\normalsize \textbf{\x} - \hfill {\y}};
-				}
+			\node [above right, inner sep=0pt, minimum height=0.2cm, text height=1.6ex, text depth=0.25ex] at (0,-{0.6*(\i-1)}) {\normalsize \textbf{\x} - \hfill {\y}};
+			}
 		\end{tikzpicture}
 	}
 }
@@ -122,8 +122,8 @@
 	\renewcommand{\softskills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x in {#1}{
-					\node [above right, inner sep=0pt, minimum height=0.4cm] at (0,-\i+0.4) {\normalsize \textbf{\x}};
-				}
+			\node [above right, inner sep=0pt, minimum height=0.2cm, text height=1.6ex, text depth=0.25ex] at (0,-{0.6*(\i-1)}) {\normalsize \textbf{\x}};
+			}
 		\end{tikzpicture}
 	}
 }
