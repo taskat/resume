@@ -142,36 +142,37 @@
 	\begin{textblock}{6}(1, 0.8)
 
 		%------------------------------------------------
+		\ifnum#1=1
+			\ifthenelse{\equal{\profilepic}{}}{}{
+				\begin{center}
+					\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
+						\clip (600/2, 567/2) circle (567/2);
+						\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
+					\end{tikzpicture}
+				\end{center}
+			}
 
-		\ifthenelse{\equal{\profilepic}{}}{}{
-			\begin{center}
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\clip (600/2, 567/2) circle (567/2);
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
-				\end{tikzpicture}
-			\end{center}
-		}
+			%------------------------------------------------
 
-		%------------------------------------------------
+			{\Huge\color{mainblue}\cvname}
 
-		{\Huge\color{mainblue}\cvname}
+			%------------------------------------------------
 
-		%------------------------------------------------
+			{\Large\color{black!80}\cvjobtitle}
 
-		{\Large\color{black!80}\cvjobtitle}
+			%------------------------------------------------
 
-		%------------------------------------------------
-
-		\renewcommand{\arraystretch}{1.6}
-		\setlength{\tabcolsep}{0pt}
-		\begin{tabular}{@{}p{0.75cm}@{\hskip 0.35cm}p{\dimexpr\linewidth-1.12cm\relax}@{}}
-			\ifthenelse{\equal{\cvdate}{}}{}{{\Large\icon{\Info}}           & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{{\Large\icon{\Letter}}      & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{{\large\icon{@}}               & \href{mailto:\cvmail}{\nolinkurl{\cvmail}}\\}
-			\ifthenelse{\equal{\github}{}}{}{{\large\icon{\faGithub}}       & \href{https://\github}{\nolinkurl{\github}}\\}
-			\ifthenelse{\equal{\linkedin}{}}{}{{\large\icon{\faLinkedin}}   & \href{https://\linkedin}{\nolinkurl{\linkedin}}\\}
-		\end{tabular}
+			\renewcommand{\arraystretch}{1.6}
+			\setlength{\tabcolsep}{0pt}
+			\begin{tabular}{@{}p{0.75cm}@{\hskip 0.35cm}p{\dimexpr\linewidth-1.12cm\relax}@{}}
+				\ifthenelse{\equal{\cvdate}{}}{}{{\Large\icon{\Info}}           & \cvdate\\}
+				\ifthenelse{\equal{\cvaddress}{}}{}{{\Large\icon{\Letter}}      & \cvaddress\\}
+				\ifthenelse{\equal{\cvnumberphone}{}}{}{{\Large\icon{\Telefon}} & \cvnumberphone\\}
+				\ifthenelse{\equal{\cvmail}{}}{}{{\large\icon{@}}               & \href{mailto:\cvmail}{\nolinkurl{\cvmail}}\\}
+				\ifthenelse{\equal{\github}{}}{}{{\large\icon{\faGithub}}       & \href{https://\github}{\nolinkurl{\github}}\\}
+				\ifthenelse{\equal{\linkedin}{}}{}{{\large\icon{\faLinkedin}}   & \href{https://\linkedin}{\nolinkurl{\linkedin}}\\}
+			\end{tabular}
+		\fi
 
 		%------------------------------------------------
 
