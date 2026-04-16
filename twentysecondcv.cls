@@ -97,11 +97,9 @@
 \newcommand\skills[1]{
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
-			\foreach [count=\i] \x/\y in {#1}{
-					\draw[fill=maingray,maingray] (0,-\i) rectangle (6,-\i+0.4);
-					\draw[fill=white,mainblue](0,-\i) rectangle (\y,-\i+0.4);
-					\node [above right] at (0,-\i+0.4) {\x};
-				}
+			\foreach [count=\i] \x in {#1}{
+			\node [above right, inner sep=0pt, minimum height=0.2cm, text height=1.6ex, text depth=0.25ex] at (0,-{0.6*(\i-1)}) {\normalsize \textbf{\x}};
+			}
 		\end{tikzpicture}
 	}
 }
@@ -110,8 +108,8 @@
 \newcommand\otherskills[1]{
 	\renewcommand{\otherskills}{
 		\begin{tikzpicture}
-			\foreach [count=\i] \x/\y in {#1}{
-			\node [above right, inner sep=0pt, minimum height=0.2cm, text height=1.6ex, text depth=0.25ex] at (0,-{0.6*(\i-1)}) {\normalsize \textbf{\x} - \hfill {\y}};
+			\foreach [count=\i] \x in {#1}{
+			\node [above right, inner sep=0pt, minimum height=0.2cm, text height=1.6ex, text depth=0.25ex] at (0,-{0.6*(\i-1)}) {\normalsize \textbf{\x}};
 			}
 		\end{tikzpicture}
 	}
@@ -187,6 +185,7 @@
 
 		\ifnum#1=1
 			\profilesection{Skills}
+			\par\vspace*{0.35cm}
 			\skills
 		\fi
 		\ifnum#1=2
