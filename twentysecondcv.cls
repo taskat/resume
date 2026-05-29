@@ -184,16 +184,16 @@
 		%------------------------------------------------
 
 		\ifnum#1=1
-			\profilesection{Skills}
+			\profilesection{\SkillLabel}
 			\par\vspace*{0.35cm}
 			\skills
 		\fi
 		\ifnum#1=2
-			\profilesection{Soft skills}
+			\profilesection{\SoftSkillLabel}
 			\par\vspace*{0.35cm}
 			\softskills
 			\par\vspace*{0.7cm}
-			\profilesection{Other skills}
+			\profilesection{\OtherSkillLabel}
 			\par\vspace*{0.35cm}
 			\otherskills
 		\fi
@@ -203,6 +203,30 @@
 		%------------------------------------------------
 
 	\end{textblock}
+}
+
+\newcommand{\SkillLabel}{
+	\ifhungarian
+		Készségek
+	\else
+		Skills
+	\fi
+}
+
+\newcommand{\SoftSkillLabel}{
+	\ifhungarian
+		Személyes készségek
+	\else
+		Soft skills
+	\fi
+}
+
+\newcommand{\OtherSkillLabel}{
+	\ifhungarian
+		Egyéb készségek
+	\else
+		Other skills
+	\fi
 }
 
 %----------------------------------------------------------------------------------------

@@ -1,0 +1,190 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\newif\ifhungarian
+\hungariantrue
+
+% ltex: language=hu-HU
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%---------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{profile.jpg} % Profile picture
+
+\cvname{Taska Tamás} % Your name
+
+\cvjobtitle{Szoftverfejlesztő} % Job title/career
+
+\cvdate{1999 július} % Date of birth
+\cvaddress{Budapest, Magyarország} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{+36 20 539 7116} % Phone number
+\cvmail{tamas.taska@gmx.com} % Email address
+\cvsite{}
+\github{github.com/taskat}
+\linkedin{linkedin.com/in/taskat}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{Go}, {Python}, {Bash}, {C++}, {Rust}, {SQL},
+	{Linux}, {Docker}, {Podman}, {Kubernetes}, {Helm charts},
+	{Git}, {GitLab CI}, {GitHub Actions}}
+
+%------------------------------------------------
+
+% Other skills section, each skill must have a value between 0 and 5 (float)
+\otherskills{{Angol/B2},{Német/társalgási},{Magyar/anyanyelvi}, {Jogosítvány/B kategória}}
+
+\softskills{{Részletekre való odafigyelés}, {Kritikus gondolkodás}, {Csapatmunka}, {Kommunikáció}, {Megoldás-orientáltság}, {Időbeosztás}}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile{1} % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\vspace*{-0.6cm}
+\section{Rólam}
+
+\begin{minipage}{0.95\textwidth}Egy budapesti szoftverfejlesztő mérnök vagyok. Főként szerveroldali/üzleti logika fejlesztéssel foglalkozom, de DevOps jellegű feladatokra is nyitott vagyok. Szeretek másokkal együtt dolgozni, vagy egy szakmai vita keretein belül keresni az optimális megoldást adott problémára.
+
+	Szabadidőmben szeretek mindenféle társasjátékot játszani, a kedvenceim a kooperatív játékok. Emellett videojátékokat is szívesen játszom, főként logikai játékokat. Ha sport, akkor mindenre nyitott, de főként a floorball és a falmászás érdekel. Amikor van időm, akkor szívesen foglalkozom hobbi projektekkel is, mint például az Advent of Code.
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{2em}
+\section{Munkatapasztalat}
+
+\twentyentry{2022-}{Kiss Consult Kft}{Szoftverfejlesztő}{
+	\begin{itemize}
+		\item Munka 2-5 fős csapatban
+		\item Backend fejlesztés, kevés frontend, DevOps jellegű feladatok
+		\item Cég szintű irányelvek megtervezése és lefektetése
+		\item Használt technológiák: Go, Python, Typescript, Angular, MinIO, OpenSearch, jBPM, Temporal, Keycloak, RabbitMQ, Asterix, PostgreSQL, Electron, Authentik, Redis, Firebase (értesítések), Docker, Podman, Kubernetes, Helm
+	\end{itemize}
+	\begin{itemize}[leftmargin=0.5cm, rightmargin=0.5cm]
+		\item \vspace{1em} \textbf{Saman} \vspace{0.5em}
+		      \begin{itemize}
+			      \item Egy Saas kifejezetten egy olajipari cég számára
+			      \item Munkafolyamat egyszerűsítése és automatizálása
+			      \item Meglévő szolgáltatások integrálása a jobb felhasználói élményért
+		      \end{itemize}
+		\item \vspace{1em} \textbf{Obelix} \vspace{0.5em}
+		      \begin{itemize}
+			      \item Egy APIaaS automatizált telefonhívások és válaszok kezelésére
+			      \item Önálló projekt
+		      \end{itemize}
+		\item \vspace{1em} \textbf{Covint} \vspace{0.5em}
+		      \begin{itemize}
+			      \item Egy SaaS COVID-19 megbetegedéssel kapcsolatos adatok előrejelzésére
+			      \item Orvosokkal és kutatókkal együttműködés
+			      \item Statisztikai alapú előrejelzések készítése a rendelkezésre álló adatok alapján
+		      \end{itemize}
+		\item \vspace{1em} \textbf{kAIa} \vspace{0.5em}
+		      \begin{itemize}
+			      \item Egy SaaS a videóhívások biztonságának növelésére
+			      \item MI alapú arcfelismerés a résztvevők azonosítására és a nem kívánt résztvevők kiszűrésére
+		      \end{itemize}
+	\end{itemize}}
+
+\twentyentry{2020-2021}{Nokia Solutions and Networks}{Gyakornok}{
+	\begin{itemize}
+		\item Chaos-Monkey-szerű eszköz elosztott rendszerek tesztelésére
+		\item Nagy csapatban való munka
+		\item Önállóan fejlesztett komponens
+		\item Használt technológiák: Go, Docker, Helm, Kubernetes
+	\end{itemize}
+}
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	 HOBBY PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Hobbi projektek}
+
+\begin{itemize}
+	\item \href{https://github.com/taskat/aoc}{Advent of Code}:
+	      \begin{itemize}[parsep=0.1em]
+		      \item Matematikai-logika problémák megoldása, minden nap új probléma decemberben
+		      \item Főként Go-ban oldottam meg, de használtam Rustot és Python-t is
+		      \item Kódminőség egy fontos szempont
+		      \item Hatékony algoritmikus és heurisztikus megoldások keresése
+	      \end{itemize}
+	\item \href{https://github.com/taskat/gopp}{Go fordító}
+	      \begin{itemize}[parsep=0.1em]
+		      \item Egy Go fordító implementálása Go-ban Antlr4 segítségével
+		      \item Szintaktikai és szemantikus elemzés megvalósítása
+		      \item A cél a fordítóprogramok működésének megismerése és megértése volt, nem egy teljes értékű fordító létrehozása
+	      \end{itemize}
+\end{itemize}
+
+% \subsection{Review}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Oktatás}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2018-2022}{B.Sc.\\Budapesti Műszaki és Gazdaságtudományi Egyetem}{}{Mérnökinformatikus szakon, szoftverfejlesztés specializáción \newline Szakdolgozat: DDS leírók automatikus generálása adatfolyam hálózat modellekből}
+	\twentyitem{2022-2024}{M.Sc.\\Budapesti Műszaki és Gazdaságtudományi Egyetem}{}{Mérnökinformatikus szakon, szoftverfejlesztés specializáción \newline Diplomamunka: \href{https://github.com/taskat/rubiks-cube}{Rubik kocka kirakásának szimulációja szakterületi nyelvek segítségével}}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+% \section{Other information}
+
+% \subsection{Review}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+% \newpage % Start a new page
+
+\makeprofile{2} % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
